@@ -1,0 +1,6 @@
+{
+	"name": "MyOnPremiseIntegrationRuntime",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}

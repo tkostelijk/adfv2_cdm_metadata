@@ -1,0 +1,72 @@
+{
+	"name": "OrchestratorObjectAudit",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sql_1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "Id",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "FolderId",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Description",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CreationTime",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "CreatedBy",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LastModifiedTime",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "LastModifiedBy",
+				"type": "nvarchar"
+			},
+			{
+				"name": "IsMonitor",
+				"type": "bit"
+			},
+			{
+				"name": "Path",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CheckedOutBy",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CheckedOutTime",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "OBJECT_AUDIT"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

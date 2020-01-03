@@ -1,0 +1,22 @@
+{
+	"name": "LoggingFromEDL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "tjkadflsweu",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@concat('blob/', utcnow('yyyy'), '/', utcnow('MM'), '/', utcnow('dd'))",
+					"type": "Expression"
+				},
+				"fileSystem": "$logs"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
